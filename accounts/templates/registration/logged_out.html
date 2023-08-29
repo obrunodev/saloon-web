@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Logout finalizado" %}{% endblock title %}
+
+{% block content %}
+
+    <div class="container">
+        <h3>{% trans "Logout finalizado" %}</h3>
+
+        <p>{% trans "Você foi deslogado da plataforma." %}</p>
+        <p>
+            <a href="{% url 'login' %}">{% trans "Clique aqui" %}</a> {% trans "para logar novamente" %}.
+        </p>
+    </div>
+
+{% endblock content %}

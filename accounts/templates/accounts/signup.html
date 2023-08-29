@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Criar conta" %}{% endblock title %}
+
+{% block content %}
+
+    <div class="container">
+        <h3>{% trans "Criar conta" %}</h3>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit">{% trans "Criar conta" %}</button>
+        </form>
+    </div>
+
+{% endblock content %}
